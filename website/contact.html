@@ -1,0 +1,248 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link rel="stylesheet" href="css\style.css">
+    <script type="text/javascript">
+        function validate(){
+            var name= document.r1.txtName.value;
+            var password= document.r1.txtpass.value;
+            if(name.trim()==""){
+               document.getElementById("errName").innerHTML="Name is reqired";
+                r1.txtName.focus();
+                return false;
+            }
+            else{
+                document.getElementById("errName").innerHTML="";
+            }
+            if(password.trim()==""){
+                document.getElementById("errPass").innerHTML="password is required";
+                r1.txtpass.focus();
+                return false;
+            }
+            else{
+                document.getElementById("errPass").innerHTML="";
+            }
+            if(password.trim().length<5){
+                document.getElementById("errPass").innerHTML="password is too short.";
+                r1.txtpass.focus();
+                return false;
+            }
+            else{
+                document.getElementById("errPass").innerHTML="";
+            }
+            var email=document.r1.txtEmail.value;
+            if (email==""){
+                document.getElementById("errEmail").innerHTML="Email is required.";
+                r1.txtEmail.focus();
+                return false;
+            }
+            else{
+                document.getElementById("errEmail").innerHTML="";
+            }
+            atpos = email.indexOf("@");
+			dotpos = email.lastIndexOf(".");
+			if(atpos < 1 || (dotpos - atpos < 2))
+			{
+                document.getElementById("errEmail").innerHTML="invalid email.";
+                r1.txtEmail.focus();
+				return false;
+			}
+            else{
+                document.getElementById("errEmail").innerHTML="";
+            }
+            var age=document.r1.numage.value;
+            if(age.trim()==""){
+                document.getElementById("errAge").innerHTML=" Age is required.";
+                r1.numage.focus();
+                return false;
+            }
+            else{
+                document.getElementById("errAge").innerHTML="";
+            }
+            var country=document.r1.dd1Country.value;
+            if(country==-1){
+                document.getElementById("errCou").innerHTML=" Country is required.";
+                r1.dd1Country.focus();
+                return false;
+            }
+            else{
+                document.getElementById("errCou").innerHTML="";
+            }
+            var des=document.r1.desreqd.value;
+            if(des.trim()==""){
+                document.getElementById("errDes").innerHTML=" description is required.";
+                r1.desreqd.focus();
+                return false;
+            }
+            else{
+                document.getElementById("errDes").innerHTML="";
+            }
+            if(des.trim().length<20){
+                document.getElementById("errDes").innerHTML=" description too short.";
+                r1.desreqd.focus();
+                return false;
+            }
+            else{
+                document.getElementById("errDes").innerHTML="";
+            }
+            return true;
+        }
+
+    </script>
+</head>
+<body>
+
+                <div class="cona">
+                    <div class="top">
+                        <div class="topic">
+                            <img src="logo.png" width="200px" style="position: relative;top:30px;">
+                            </div>
+            
+                    </div>
+                   
+                    <div class="navbar">
+                        <ul>
+                            <li><a  href="index.html"><b>Home</b></a></li>
+                            <li><a  href="aboutus.html"><b>About us</b></a></li>
+                            <li><a href="place and activity.html"><b>Places And Activity</b></a></li>
+                             <li><a   href="gallery.html"><b>Photos</b></a></li>
+                            <li><a  href="contact.html"><b>Contact Us</b></a></li>
+                        </ul>
+                    </div>
+                     <br>
+                <br>
+                <div class="h">
+                        <h1>CONTACT US</h1>
+                </div>
+                <br><br><br><br><br><br>
+               <div class="middlepart">
+                    <div class="contab">
+                        <form onsubmit="return validate();" name="r1">
+                            <table cellspacing="0" cellpadding="10px">
+                                <tr>
+                                    <td colspan="2">
+                                        <center><h1><b>Join with us</b></h1></center>
+                                    </td>
+                                </tr> 
+                                <tr>
+                                    <td width="130px"><p>Name</p></td>
+                                    <td width="500px">
+                                        <input type="text" name="txtName" placeholder="Username">
+                                        <span id=errName class="red"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><p>Email</p></td>
+                                    <td width="500px"><input type="text" name="txtEmail" placeholder="Email">
+                                    <span id=errEmail class="red"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><p>Password</p></td>
+                                    <td><input type="password" name="txtpass" placeholder="Password">
+                                        <span id=errPass class="red"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                   <td><p>Gender</p></td>
+                                  <td> <input type="radio" id="male"        name="gender" value="male">male
+                                    <input type="radio" id="female" name="gender" value="female" checked>female
+                                    <input type="radio" id="other" name="gender" value="other">other</td>
+
+                                </tr>
+                                <tr>
+                                    <td><p>Age</p></td>
+                                    <td><input type="number" name="numage" min="1" max="150" placeholder="Age">
+                                        <span id=errAge class="red"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><p>Country</p></td>
+                                    <td>
+                                        <select name="dd1Country">
+                                            <option value="-1">---Select a Country---</option>
+                                            <option value="0">Nepal</option>
+                                            <option value="1">China</option>
+                                            <option value="2">Germany</option>
+                                            <option value="3">UK</option>
+                                        </select>
+                                        <span id=errCou class="red"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><p>your description</p></td>
+                                       <td> <textarea  name="desreqd" rows="5" cols="20"> </textarea>
+                                        <span id=errDes class="red"></span>
+                                    </td>
+                                </tr>
+                                <br><br>
+                                <tr>
+                                    <td colspan="2">
+                                        <center><input type="submit" name="btnsubmit" value="SUBMIT"></center>
+                                    </td>
+                                </tr> 
+                                </table>                      
+                        </form>
+                    </div>
+                      
+                   <div class="i">
+                       <img src="21.jpg" >
+                   </div>
+                </div>
+                </div>
+
+                <div class="footer">
+                    <div class="lasta">
+                        <p><b>POPULAR PLACES</b></p>
+                        <p>-Illam</p>
+                        <p>-Pokhara</p>
+                       <p>-Chitwan National park</p>
+                        <p>-Mt Everest</p>
+            
+                    </div>
+                    <div class="lastb">
+                        <h2> SITE MAP </h2>
+                        <p>Home</p>
+                        <P>Content</P>
+                        <P>Place and activities</P>
+                        <P>Photos</P>
+                        <P>Contract us</P>
+
+                        </div>
+
+                        
+            
+                    <div class="lastc">
+                        <h2>C0NTRACT</h2>
+                        <h2>Around the world tour and travels</h2>
+                        <p>Phone Number- 9866412451</p>
+                        <div class="l">
+                        <a href="mailto:rabinashahi652@gmail.com"><b>SEND EMAIL</b></a>
+                        </div>
+                        <p>Jajarkot,Khalanga,Nepal</p>
+                        <h3><b> Site you will love</b> </h3>
+                        <div class="lb">
+                        <a href="https://unsplash.com/s/photos/nepal" target="_blank"><h3>-Pictures Of Nepal</h3></a>
+                        <a href="https://www.pinterest.com/preeyasubba9/nepal-traditional-dress/" target="_blank"><h3>-Culture</h3></a>
+
+
+
+                        </div>
+
+                        
+            
+                    </div>
+                    <br><br>
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d437.46153373700736!2d82.27958340520225!3d28.698850587496185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39bd4c47f2357bd7%3A0x4bbdeb069e68f5c8!2sRimna%20Bazar!5e0!3m2!1sne!2snp!4v1599642329180!5m2!1sne!2snp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+
+               </div>
+
+
+                     
+                
+            </body>
+            </html>

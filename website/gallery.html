@@ -1,0 +1,131 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gallery</title>
+    <link rel="stylesheet" href="css\style.css">
+</head>
+<body>
+
+    <div class="coa">
+        <div class="top">
+            <div class="topic">
+                <img src="logo.png" width="200px" style="position: relative;top:30px;">
+                </div>
+
+        </div>
+       
+        <div class="navbar" >
+            <ul>
+                <li><a  href="index.html"><b>Home</b></a></li>
+                <li><a  href="aboutus.html"><b>About us</b></a></li>
+                <li><a href="place and activity.html"><b>Places And Activity</b></a></li>
+                 <li><a   href="gallery.html"><b>Photos</b></a></li>
+                <li><a  href="contact.html"><b>Contact Us</b></a></li>
+            </ul>
+        </div>
+         <br>
+  
+  
+    <div class="h">
+            <h1>GALARY</h1>
+    </div>
+    <br><br><br><br>
+    <div class="topic">
+        <h2>some of the pictures of nepal</h2>
+    </div>
+        
+    <div class="imgbox"><img src="3.jpg">
+
+    </div>
+    <br>
+    <br>
+    <ul class="thumb"> 
+        <li><a href="8.jpg" target="imgbox"><img src="8.jpg" width="150px" height="150px"></a></li>
+        <li><a href="5.jpg" target="imgbox"><img src="5.jpg" width="150px" height="150px"></a></li>
+        <li><a href="9.jpg" target="imgbox"><img src="9.jpg" width="150px" height="150px"></a></li>
+        <li><a href="7.jpg" target="imgbox"><img src="7.jpg" width="150px" height="150px"></a></li>
+    </ul>
+<br><br><br>
+
+<ul class="image"> 
+    <li><a href="15.jpg" target="imgbox"><img src="15.jpg" class="izoom"></a></li>
+    <li><a href="16.jpg" target="imgbox"><img src="16.jpg" class="izoom"></a></li>
+    <li><a href="17.jpg" target="imgbox"><img src="17.jpg" class="izoom"></a></li>
+    
+</ul>
+<br><br>
+<ul class="image">
+    <li><a href="18.jpg" target="imgbox"><img src="18.jpg" class="izoom"></a></li>
+    <li><a href="20.jpg" target="imgbox"><img src="20.jpg" class="izoom"></a></li>
+    <li><a href="19.jpg" target="imgbox"><img src="19.jpg"  class="izoom"></a></li>
+</ul>
+<br><br>
+</div>
+
+
+
+  <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+      <script type="text/javascript">
+           $(document).ready(function(){
+               $('.thumb a').click(function(e){
+                   e.preventDefault();
+                   $('.imgbox img').attr("src", $(this).attr("href"));
+            })
+
+           })
+              
+    
+    </script>
+     <div class="footer">
+        <div class="lasta">
+            <p><b>POPULAR PLACES</b></p>
+            <p>-Illam</p>
+            <p>-Pokhara</p>
+           <p>-Chitwan National park</p>
+            <p>-Mt Everest</p>
+
+        </div>
+        <div class="lastb">
+            <h2> SITE MAP </h2>
+            <p>Home</p>
+            <P>Content</P>
+            <P>Place and activities</P>
+            <P>Photos</P>
+            <P>Contract us</P>
+            </div>
+            
+
+        <div class="lastc">
+            <h2>C0NTRACT</h2>
+            <h2>Around the world tour and travels</h2>
+            <p>Phone Number- 9866412451</p>
+            <div class="l">
+            <a href="mailto:rabinashahi652@gmail.com"><b>SEND EMAIL</b></a>
+            </div>
+            <p>Jajarkot,Khalanga,Nepal</p>
+            <h3><b> Site you will love</b> </h3>
+            <div class="lb">
+            <a href="https://unsplash.com/s/photos/nepal" target="_blank"><h3>-Pictures Of Nepal</h3></a>
+            <a href="https://www.pinterest.com/preeyasubba9/nepal-traditional-dress/" target="_blank"><h3>-Culture</h3></a>
+            </div>
+            
+
+        </div>
+   
+    </div>
+
+     <style>
+         .izoom{
+              width: 400px;
+              height: 300px;
+              transition: transform ease-in-out 0.3s;
+         }
+         .izoom:hover{
+             transform: scale(1.2);
+         }
+     </style>
+         
+    
+</body>
+</html>
